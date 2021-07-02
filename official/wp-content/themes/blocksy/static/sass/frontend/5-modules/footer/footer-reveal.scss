@@ -1,0 +1,12 @@
+.ct-footer-reveal {
+	
+	.site-main {
+		z-index: 1;
+		box-shadow: var(--boxShadow);
+	}
+
+	.site-footer {
+		position: var(--position);
+		bottom: 0;
+	}
+}

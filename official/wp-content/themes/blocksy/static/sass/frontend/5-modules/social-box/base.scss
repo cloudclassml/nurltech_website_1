@@ -1,0 +1,50 @@
+.ct-social-box {
+	display: flex;
+	flex-wrap: var(--wrap, wrap);
+	margin-top: calc(var(--spacing) * -1);
+	margin-left: calc(var(--spacing) / -2);
+	margin-right: calc(var(--spacing) / -2);
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: var(--spacing);
+		margin-left: calc(var(--spacing) / 2);
+		margin-right: calc(var(--spacing) / 2);
+		--transition: color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+					  background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+					  border-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+		svg {
+			fill: currentColor;
+			width: var(--iconSize);
+
+			> * {
+				transition: none;
+			}
+		}
+	}
+
+	// icon size
+	&[data-size="small"] {
+		--iconSize: 15px;
+	}
+
+	&[data-size="medium"] {
+		--iconSize: 20px;
+	}
+
+	&[data-size="large"] {
+		--iconSize: 25px;
+	}
+
+	// icons label
+	.ct-label:not([hidden]) {
+		margin-left: 10px;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1;
+		display: var(--visibility);
+	}
+}

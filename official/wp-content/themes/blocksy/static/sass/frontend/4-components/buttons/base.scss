@@ -1,0 +1,40 @@
+$buttons-base:
+	'.button',
+	'.ct-button',
+	'.entry-tags a',
+	'.added_to_cart',
+	'.ct-button-ghost',
+	'input[type="submit"]',
+	'button[type="submit"]',
+	'.wp-block-button__link',
+	'.wp-block-file .wp-block-file__button',
+	'.forminator-design--none .forminator-button',
+;
+
+#{$buttons-base} {
+	display: var(--display, inline-flex);
+	align-items: center;
+	justify-content: center;
+	min-height: var(--buttonMinHeight);
+	padding: var(--padding, 5px 25px);
+	border: none;
+	appearance: none;
+	cursor: pointer;
+	user-select: none;
+	text-align: center;
+	border-radius: var(--buttonBorderRadius);
+	transition: all 0.2s ease;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled, &.disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	@include media-breakpoint-down (xs) {
+		--padding: 5px 10px;
+	}
+}

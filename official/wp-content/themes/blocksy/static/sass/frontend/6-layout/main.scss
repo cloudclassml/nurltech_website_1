@@ -1,0 +1,66 @@
+#main-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	// z-index: 1;
+	min-height: 100vh;
+
+	.site-main {
+		flex-grow: 1;
+	}
+}
+
+
+// Layout containers
+[class*="ct-container"] {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ct-container,
+.ct-container-narrow {
+	width: var(--containerWidth);
+
+	@include media-breakpoint-down (sm) {
+		--containerWidth: 88vw;
+	}
+
+	@include media-breakpoint-up (md) {
+		--containerWidth: 90vw;
+	}
+}
+
+// Default container
+.ct-container {
+	max-width: var(--maxSiteWidth);
+}
+
+
+// Narrow container
+.ct-container-narrow {
+	max-width: var(--narrowContainer);
+}
+
+
+// Fluid container
+.ct-container-fluid {
+	@include media-breakpoint-down (sm) {
+		width: 88vw;
+	}
+
+	@include media-breakpoint-only (md) {
+		width: 90vw;
+	}
+
+	@include media-breakpoint-up (lg) {
+		width: calc(100vw - 100px);
+	}
+}
+
+// Main page container spacing
+body:not(.ct-primary-spacing) {
+	.content-area {
+		padding-top: var(--contentAreaSpacing);
+		padding-bottom: var(--contentAreaSpacing);
+	}
+}

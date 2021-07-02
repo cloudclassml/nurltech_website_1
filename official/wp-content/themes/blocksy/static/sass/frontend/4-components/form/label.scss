@@ -1,0 +1,36 @@
+label {
+	--fontSize: 15px;
+	--lineHeight: inherit;
+	cursor: pointer;
+	margin: 0 0 0.5em 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+// inside label
+label {
+	input[type="radio"],
+	input[type="checkbox"] {
+		--top: 2px;
+	}
+}
+
+
+// speciffic checkboxes
+$selector: 
+	'.gdpr-confirm-policy',
+	'.comment-form-cookies-consent'
+;
+
+#{$selector} {
+	display: var(--display, flex);
+	align-items: baseline;
+
+	label {
+		--fontSize: 13px;
+		margin-left: 0.3em;
+	}
+}

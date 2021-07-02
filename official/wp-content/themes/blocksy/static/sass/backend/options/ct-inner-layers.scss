@@ -1,0 +1,26 @@
+.ct-inner-layer {
+	.ct-layer-controls {
+		height: 34px;
+
+		button {
+			width: 34px
+		}
+
+		span {
+			font-weight: 500;
+		}
+
+		.ct-visibility {
+			svg {
+				width: 13px;
+				height: 13px;
+			}
+
+			&:before {
+				width: 15px;
+			}
+		}
+	}
+
+	--layer-content-padding: 0 15px 20px 15px;
+}

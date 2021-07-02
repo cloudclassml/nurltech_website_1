@@ -1,0 +1,37 @@
+.site-branding {
+	display: flex;
+	flex-direction: column;
+}
+
+.site-title {
+	margin-bottom: 0;
+}
+
+.custom-logo-link {
+	display: flex;
+}
+
+.custom-logo {
+	width: auto;
+	height: var(--maxHeight);
+	object-fit: contain;
+}
+
+.site-description {
+	color: var(--color);
+	margin: 5px 0 0 0;
+}
+
+// alignment
+[data-column="middle"] .site-branding {
+	align-items: center;
+	text-align: center;
+}
+
+[data-column="start"] [data-items="secondary"],
+[data-column="end"] [data-items="primary"] {
+	.site-branding {
+		align-items: flex-end;
+		text-align: right;
+	}
+}

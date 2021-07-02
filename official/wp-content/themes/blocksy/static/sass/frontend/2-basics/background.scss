@@ -1,0 +1,25 @@
+body,
+#header,
+.ct-panel,
+[data-row],
+.site-footer,
+.ct-trending-block,
+.footer-widgets-area,
+.ct-comments-container,
+[data-structure*="boxed"],
+.ct-related-posts-container,
+.hero-section[data-type="type-2"] {
+	background-color: var(--backgroundColor);
+	background-image: var(--backgroundImage);
+	background-size: var(--backgroundSize);
+	background-repeat: var(--backgroundRepeat);
+	background-position: var(--backgroundPosition);
+	background-attachment: var(--backgroundAttachment);
+}
+
+// apply background to site-main when sticky footer is enabled 
+.ct-footer-reveal {
+	#main-container, .site-main {
+		background: inherit;
+	}
+}

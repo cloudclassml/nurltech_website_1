@@ -1,0 +1,19 @@
+.onsale {
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: var(--badgeTop, 15px);
+	left: var(--badgeLeft, 15px);
+	z-index: 1;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 0;
+	text-transform: uppercase;
+	margin: 0 !important;
+	padding: 0 10px !important;
+	height: 26px;
+	border-radius: 3px;
+	color: var(--saleBadgeTextColor, #fff);
+	background-color: var(--saleBadgeBackgroundColor);
+}

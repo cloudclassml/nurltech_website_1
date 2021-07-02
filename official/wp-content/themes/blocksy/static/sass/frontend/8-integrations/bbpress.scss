@@ -1,0 +1,25 @@
+// search form
+#bbpress-forums div.bbp-search-form {
+	margin-bottom: 20px;
+
+	input[type="text"] {
+		--formInputHeight: 30px;
+		--formPadding: 0 7px;
+	}
+
+	.button {
+		--buttonMinHeight: 30px;
+		--padding: 5px 15px;
+		--buttonShadow: none;
+		--buttonTransform: none;
+	}
+}
+
+
+#bbpress-forums fieldset {
+
+	input[type="checkbox"] {
+		margin-bottom: 0;
+		margin-right: 5px;
+	}
+}

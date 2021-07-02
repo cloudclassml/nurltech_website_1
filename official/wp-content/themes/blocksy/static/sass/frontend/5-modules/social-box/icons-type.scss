@@ -1,0 +1,21 @@
+.ct-social-box {
+
+	// shape size
+	&[data-type="square"],
+	&[data-type="rounded"] {
+		a {
+			width: calc(var(--iconSize) * 2.5);
+			height: calc(var(--iconSize) * 2.5);
+		}
+	}
+
+
+	// shape type
+	&[data-type="square"] a {
+		border-radius: 2px;
+	}
+
+	&[data-type="rounded"] a {
+		border-radius: 100%;
+	}
+}

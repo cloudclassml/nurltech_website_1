@@ -1,0 +1,17 @@
+body.rtl {
+	#ct-page-options .customize-panel-actions {
+		h3 {
+			padding: 0 14px 0 0;
+		}
+
+		button {
+			padding: 0 24px 0 0;
+			border-left-color: #ddd;
+			border-right-color: #f3f4f5;
+
+			&:before {
+				left: 14px;
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+[data-behavior] {
+	position: var(--position, relative);
+	z-index: 10;
+}
+
+[data-behavior*="absolute"] {
+	--position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}

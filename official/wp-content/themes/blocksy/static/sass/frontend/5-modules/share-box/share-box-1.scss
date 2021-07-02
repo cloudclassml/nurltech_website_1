@@ -1,0 +1,43 @@
+.ct-share-box[data-type="type-1"] {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+	border: 1px solid var(--borderColor);
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		margin-right: -1px;
+		margin-bottom: -1px;
+		border-right: 1px solid var(--borderColor);
+		border-bottom: 1px solid var(--borderColor);
+
+		svg {
+			--icon-size: 18px;
+			fill: currentColor;
+		}
+
+		&:not(:first-child) {
+			// border-left: 1px solid var(--borderColor);
+		}
+	}
+}
+
+
+// box location
+.ct-share-box {
+	&[data-location="top"] {
+		margin-bottom: var(--margin);
+	}
+
+	&[data-location="bottom"] {
+		margin: var(--margin) 0;
+	}
+}
+
+.hero-section[data-type="type-1"] {
+	+ .ct-share-box[data-location="top"] {
+		margin-top: var(--margin);
+	}
+}

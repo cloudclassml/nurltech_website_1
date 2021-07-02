@@ -1,0 +1,26 @@
+[data-structure="default:wide:normal"],
+[data-structure="default:wide:narrow"] {
+
+	> .entry-content {
+		width: 100vw;
+		margin-left: calc( -50vw + 50%);
+		margin-right: calc( -50vw + 50%);
+
+		> * {
+			margin-left: auto !important;
+			margin-right: auto !important;
+
+			&:not(.alignfull) {
+				width: var(--blockWidth) !important;
+			}
+
+			&:not(.alignwide):not(.alignfull) {
+				max-width: var(--blockMaxWidth) !important;
+			}
+		}
+
+		> .alignwide {
+			max-width: var(--blockWideWidth);
+		}
+	}
+}

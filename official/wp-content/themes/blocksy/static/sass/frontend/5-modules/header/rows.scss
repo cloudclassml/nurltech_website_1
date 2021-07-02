@@ -1,0 +1,38 @@
+// row box shadow
+header {
+	[data-row] {
+		position: relative;
+		box-shadow: var(--boxShadow);
+	}
+
+	[data-row='top'] {
+		z-index: 3;
+	}
+
+	[data-row='middle'] {
+		z-index: 2;
+	}
+
+	[data-row='bottom'] {
+		z-index: 1;
+	}
+}
+
+// row border
+header {
+	[data-border*="top-fixed"] > div {
+		border-top: var(--borderTop);
+	}
+
+	[data-border*="bottom-fixed"] > div {
+		border-bottom: var(--borderBottom);
+	}
+
+	[data-border*="top-full"] {
+		border-top: var(--borderTop);
+	}
+
+	[data-border*="bottom-full"] {
+		border-bottom: var(--borderBottom);
+	}
+}

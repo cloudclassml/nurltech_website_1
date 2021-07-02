@@ -1,0 +1,19 @@
+[data-structure*="narrow"] {
+	--blockWidth: var(--containerWidth);
+	--blockMaxWidth: var(--narrowContainer);
+	--blockWideWidth: calc(var(--narrowContainer) + var(--wideOffset) * 2);
+}
+
+[data-structure*="normal"] {
+	--blockWidth: var(--containerWidth);
+	--blockMaxWidth: var(--maxSiteWidth);
+	--blockWideWidth: calc(var(--maxSiteWidth) + var(--wideOffset) * 2);
+}
+
+
+// wide & boxex
+[data-structure*="boxed"] {
+	padding: var(--contentBoxedSpacing);
+	box-shadow: var(--boxShadow);
+	border-radius: var(--borderRadius);
+}

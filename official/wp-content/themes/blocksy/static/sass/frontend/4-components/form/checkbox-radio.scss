@@ -1,0 +1,67 @@
+input[type="radio"],
+input[type="checkbox"] {
+
+	display: inline-block;
+	position: relative;
+	top: var(--top, 3px);
+	width: 17px;
+	min-width: 17px;
+	height: 17px;
+	margin: 0 0.5em 0 0;
+	background: rgba(255, 255, 255, 0.3);
+	border-width: var(--formBorderSize);
+	border-style: solid;
+	border-color: var(--radioCheckboxInitialColor);
+	cursor: pointer;
+	appearance: none;
+
+	&:before {
+		position: absolute;
+		content: '';
+		z-index: 2;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		margin: auto;
+	}
+
+	&:checked {
+		border-color: var(--radioCheckboxAccentColor);
+		background: var(--radioCheckboxAccentColor);
+
+		&:before {
+			opacity: 1;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: 3px;
+
+	&:before {
+		top: -2px;
+		width: 9px;
+		height: 5px;
+		border: 2px solid #fff;
+		border-top: none;
+		border-right: none;
+		transform: rotate(-45deg);
+	}
+}
+
+input[type="radio"] {
+	border-radius: 100%;
+
+	&:before {
+		width: 5px;
+		height: 5px;
+		background: #fff;
+		border-radius: inherit;
+	}
+}

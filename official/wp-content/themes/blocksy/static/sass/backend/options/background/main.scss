@@ -1,0 +1,72 @@
+@import 'patterns';
+@import 'color-picker';
+@import 'background-preview';
+
+.ct-background-modal-wrapper {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+}
+
+.ct-image-tab,
+.ct-patterns-tab {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.ct-background-modal {
+	display: flex;
+	flex-direction: column;
+	width: var(--width, 295px);
+	min-height: 420px;
+	max-height: 455px;
+	border-radius: 6px;
+	background: #fff;
+	margin-bottom: 25px;
+	transform-origin: center top;
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+
+	position: absolute;
+	z-index: 20;
+	top: 13px;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale3d(0.95, 0.95, 1);
+	transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transform: scale3d(1, 1, 1);
+	}
+
+	.ct-modal-tabs {
+		flex: 0 0 43px;
+	}
+
+	> div {
+		flex: 1;
+
+		.ct-control {
+			margin-bottom: 25px;
+
+			&:not(:last-child) {
+				padding-bottom: 25px;
+				border-bottom: 1px dashed #eee;
+			}
+		}
+	}
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: -7px;
+		right: 27px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 6px 7px 6px;
+		border-color: transparent transparent #ffffff transparent;
+	}
+}

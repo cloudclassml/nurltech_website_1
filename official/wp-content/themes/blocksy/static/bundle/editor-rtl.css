@@ -1,0 +1,8 @@
+/**
+ * Blocksy - v1.7.16
+ * 
+ * Copyright (c) 2020
+ * Licensed GPLv2+
+ */
+
+body.rtl #ct-page-options .customize-panel-actions h3{padding:0 14px 0 0}body.rtl #ct-page-options .customize-panel-actions button{padding:0 24px 0 0;border-left-color:#ddd;border-right-color:#f3f4f5}body.rtl #ct-page-options .customize-panel-actions button:before{left:14px}

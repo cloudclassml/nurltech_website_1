@@ -1,0 +1,33 @@
+.ct-structure-narrow {
+	--blockMaxWidth: 750px;
+}
+
+.ct-structure-normal {
+	@media (max-width: 1449px) {
+		--blockMaxWidth: 800px;
+	}
+
+	@media (min-width: 1450px) {
+		--blockMaxWidth: 1100px;
+
+		.wp-block[data-align="wide"] {
+			max-width: 1350px !important;
+		}
+	}
+}
+
+.wp-block {
+	max-width: var(--blockMaxWidth);
+}
+
+// .wp-block-getwid-section__inner-wrapper {
+// 	max-width: var(--blockMaxWidth) !important;	
+// }
+
+div.wp-block-getwid-section {
+	.wp-block-getwid-section__wrapper {
+		.wp-block-getwid-section__inner-wrapper {
+			max-width: var(--blockMaxWidth);	
+		}
+	}
+}

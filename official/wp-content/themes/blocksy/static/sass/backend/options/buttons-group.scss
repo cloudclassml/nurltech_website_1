@@ -1,0 +1,89 @@
+.ct-buttons-group {
+	display: flex;
+	margin: 0;
+
+	li {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+		cursor: pointer;
+		height: 30px;
+		min-width: 40px;
+		margin: 0;
+		background: rgba(255, 255, 255, 0.6);
+		// background: #fff;
+		box-shadow: inset 0px 0px 0px 1px #ddd;
+		transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover {
+			color: #444;
+			background: rgba(255, 255, 255, 1);
+		}
+
+		&.active {
+			z-index: 2;
+			color: #fff;
+			background: $accent_color;
+			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+
+		&:not(:first-child) {
+			margin-left: -1px;
+		}
+
+		// border radius
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}
+
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+		}
+	}
+
+	// compact type
+	&[data-type="compact"] li {
+		height: 26px;
+	}
+
+	// ratio buttons
+	&[data-buttons="ratio"] {
+		font-size: 11px;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+
+	// meta divider
+	&[data-type="meta-divider"] li {
+		flex: 1 0 0;
+
+		&:nth-child(2):before {
+			content: '';
+			width: 1px;
+			height: 10px;
+			border-radius: 2px;
+			background: currentColor;
+			transform: rotate(25deg);
+		}
+
+		&:nth-child(3):before {
+			content: '';
+			width: 10px;
+			height: 1px;
+			border-radius: 2px;
+			background: currentColor;
+		}
+
+		&:nth-child(4):before {
+			content: '●';
+			font-size: 5px;
+		}
+	}
+}

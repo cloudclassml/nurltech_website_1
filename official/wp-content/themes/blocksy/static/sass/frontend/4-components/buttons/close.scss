@@ -1,0 +1,40 @@
+.close-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: var(--position, absolute);
+	top: var(--top, 20px);
+	right: var(--right, 20px);
+	z-index: 2;
+	cursor: pointer;
+	color: var(--closeButtonColor, #fff);
+	width: var(--closeButtonSize, 40px);
+	height: var(--closeButtonSize, 40px);
+	border-radius: var(--closeButtonRadius, 7px);
+	background: var(--closeButtonBackground, rgba(0, 0, 0, 0.5));
+
+	.closed {
+		opacity: 0.7;
+		transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+		span {
+			--ty: 0;
+			background: transparent;
+
+			&:before {
+				--rotate: 45deg;
+			}
+
+			&:after {
+				--rotate: -45deg;
+			}
+		}
+	}
+
+	&:hover {
+		.closed {
+			opacity: 1;
+			transform: rotate(90deg);
+		}
+	}
+}

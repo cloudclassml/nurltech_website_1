@@ -1,0 +1,66 @@
+.cart-collaterals {
+	display: grid;
+
+	@include media-breakpoint-down (md) {
+		grid-row-gap: 50px;
+	}
+
+	@include media-breakpoint-up (lg) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 50px;
+	}
+
+	h2 {
+		--fontSize: 20px;
+		margin-bottom: 20px;
+		text-transform: capitalize;
+	}
+
+	.cart_totals {
+		align-self: flex-start;
+		position: sticky;
+		top: 50px;
+
+		@include media-breakpoint-up (lg) {
+			grid-column: 2;
+		}
+
+		table {
+			margin-bottom: 40px;
+
+			th {
+				width: 35%;
+			}
+
+			th {
+				vertical-align: top;
+				line-height: 2em;
+				border-right: 0;
+			}
+		}
+
+		.shipping-calculator-form,
+		.woocommerce-shipping-calculator {
+			margin-top: 10px;
+		}
+
+		.checkout-button {
+			--display: flex;
+			text-transform: capitalize;
+		}
+	}
+}
+
+// cross sells
+.cross-sells {
+	
+	.products {
+		@include media-breakpoint-up (lg) {
+			--shopColumns: repeat(2, 1fr);
+		}
+	}
+
+	.add_to_cart_button.added {
+		--display: initial;
+	}
+}

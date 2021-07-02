@@ -1,0 +1,35 @@
+[data-structure="brizy:wide:normal"],
+[data-structure="brizy:wide:narrow"] {
+
+	.brz-section--boxed .brz-container__wrap {
+		width: var(--blockWidth) !important;
+		max-width: var(--blockMaxWidth) !important;
+	}
+
+	.brz-ed-wrap-block-wrap--first {
+		height: 500px !important;
+	}
+}
+
+
+// reset options
+.brz-ed {
+
+	// input option
+	.brz-input[class*="brz-ed-control"] {
+		border: none !important;
+		border-radius: 4px !important;
+	}
+
+	.brz-input[class*="multi-input"],
+	.brz-ed-option__input-number-wrap .brz-input,
+	.brz-ed-control__number-unit__input .brz-input,
+	.brz-ed-option__multi-input-container .brz-input {
+		height: initial !important;
+	}
+}
+
+
+.brz-menu {
+	--listItemSpacing: 0;
+}

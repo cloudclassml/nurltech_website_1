@@ -1,0 +1,50 @@
+[class*="_inner-container"] {
+	width: 100% !important;
+	padding-top: calc(var(--contentSpacing) + 50px);
+	padding-bottom: calc(var(--contentSpacing) + 50px);
+
+	> * {
+		margin-left: auto;
+		margin-right: auto;
+
+		&:not(.alignfull) {
+			width: var(--innerBlockWidth);
+		}
+
+		&:not(.alignwide):not(.alignfull) {
+			max-width: var(--blockMaxWidth);
+		}
+	}
+
+	> .alignwide {
+		max-width: var(--blockWideWidth);
+	}
+}
+
+
+// Inner container width
+.entry-content {
+
+	// normal & wide parent block
+	> *:not(.alignfull) [class*="_inner-container"] {
+		--innerBlockWidth: calc(100% - 100px);
+	}
+
+
+	// full parent block
+	> .alignfull [class*="_inner-container"] {
+		--innerBlockWidth: var(--blockWidth);
+
+
+
+		// INNER + INNER LEVEL / normal & wide parent block inside full block
+		> *:not(.alignfull) [class*="_inner-container"] {
+			--innerBlockWidth: calc(100% - 100px);
+		}
+
+		// INNER + INNER LEVEL / full parent block parent block inside full block
+		> .alignfull [class*="_inner-container"] {
+			--innerBlockWidth: var(--blockWidth);
+		}
+	}
+}
